@@ -1,20 +1,20 @@
-#include <Wire.h>			// install wire library
-#include <LiquidCrystal_I2C.h>		//install liquidCrystal_I2C
-LiquidCrystal_I2C lcd(0x27,16,2);  	// Change the HEX address
-#include <Servo.h> 			// install servo motor library
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);  //Change the HEX address
+#include <Servo.h> 
 
 Servo myservo1;
 
 int IR1 = 2;
 int IR2 = 4;
 
-int Slot = 4;          			 //Enter Total number of parking Slots
+int Slot = 4;           //Enter Total number of parking Slots
 
 int flag1 = 0;
 int flag2 = 0;
 
 void setup() {
-  lcd.begin(16,2);
+  lcd.begin();
   lcd.backlight();
 pinMode(IR1, INPUT);
 pinMode(IR2, INPUT);
@@ -61,3 +61,4 @@ lcd.setCursor (0,1);
 lcd.print("Slot Left: ");
 lcd.print(Slot);
 }
+Write to Smk Rahad
